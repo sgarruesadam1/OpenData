@@ -23,6 +23,8 @@ environment:
 dependencies:
   get: ^3.15.0 
   get_storage:
+  flutter_map: any
+  utm: ^0.1.2
   flutter:
     sdk: flutter
 
