@@ -1,4 +1,12 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:opendata/providers/fiestas_provider.dart';
+import 'package:opendata/widgets/drawer_widget.dart';
 
+import 'listaLocalidades_Screen.dart';
+import 'listaNombres_Screen.dart';
 
 class ListaTiposScreen extends StatelessWidget {
   Map<String, Object> args = new Map<String, Object>();
@@ -6,7 +14,7 @@ class ListaTiposScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    box.write('nombreLocalidad', null);
+    box.write('nombrelocalidad', null);
     //args = ModalRoute.of(context).settings.arguments;
     args = Get.arguments ?? new Map<String, Object>();
     return Scaffold(
@@ -14,6 +22,7 @@ class ListaTiposScreen extends StatelessWidget {
         title: Text("Tipos"),
       ),
       //drawer: MenuWidget(),
+      drawer: DrawerWidget(),
       body: _lista(context),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -28,7 +37,7 @@ class ListaTiposScreen extends StatelessWidget {
   Widget _lista(BuildContext context) {
     return FutureBuilder(
       future: fiestasProvider
-          .cargarTipos(box.read('nombreLocalidad') ?? args['nombreLocalidad']),
+          .cargarTipos(box.read('nombrelocalidad') ?? args['nombrelocalidad']),
       initialData: [],
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
@@ -61,4 +70,3 @@ class ListaTiposScreen extends StatelessWidget {
     return lst;
   }
 }
-

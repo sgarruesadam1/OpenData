@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:trabajo_open_data/screens/listaLocalidades_Screen.dart';
-import 'package:trabajo_open_data/screens/listaNombres_screen.dart';
-import 'package:trabajo_open_data/screens/mapa_screen.dart';
+
+import 'Screens/listaLocalidades_Screen.dart';
 
 void main() async {
   await GetStorage.init();

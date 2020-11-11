@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:trabajo_open_data/screens/listaLocalidades_Screen.dart';
-import 'package:trabajo_open_data/screens/listaNombres_screen.dart';
-import 'package:trabajo_open_data/screens/listaTipos_Sreen.dart';
-import 'package:trabajo_open_data/screens/mapa_screen.dart';
- 
+import 'package:opendata/Screens/listaLocalidades_Screen.dart';
+import 'package:opendata/Screens/listaNombres_Screen.dart';
+import 'package:opendata/Screens/listaTipos_Screen.dart';
+
 class DrawerWidget extends StatelessWidget {
   final box = GetStorage();
- 
+
   @override
   Widget build(BuildContext context) {
     String localidad = box.read('localidad');
@@ -51,4 +50,3 @@ class DrawerWidget extends StatelessWidget {
     ]));
   }
 }
- 

@@ -2,12 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:trabajo_open_data/models/fiestas_models.dart';
-import 'package:trabajo_open_data/providers/fiestas_provider.dart';
-import 'package:trabajo_open_data/widgets/drawer_widget.dart';
-import 'package:trabajo_open_data/widgets/swiper_widget.dart';
-
-import 'listaTipos_Sreen.dart';
+import 'package:opendata/providers/fiestas_provider.dart';
+import 'package:opendata/widgets/drawer_widget.dart';
+import 'package:opendata/widgets/swiper_widget.dart';
 
 class ListaNombresScreen extends StatelessWidget {
   Map<String, Object> args = new Map<String, Object>();

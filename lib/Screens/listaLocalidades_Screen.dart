@@ -2,29 +2,31 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:trabajo_open_data/providers/fiestas_provider.dart';
- 
-import 'listaTipos_Sreen.dart';
- 
+import 'package:opendata/providers/fiestas_provider.dart';
+import 'package:opendata/widgets/drawer_widget.dart';
+
+import 'listaTipos_Screen.dart';
+
 class ListaLocalidadesScreen extends StatelessWidget {
   Map<String, Object> args = new Map<String, Object>();
   final box = GetStorage();
- 
+
   @override
   Widget build(BuildContext context) {
     box.write('nombrelocalidad', null);
     box.write('tipo', null);
     box.write('nombre', null);
- 
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Localidades"),
       ),
       //drawer: MenuWidget(),
+      drawer: DrawerWidget(),
       body: _lista(context),
     );
   }
- 
+
   Widget _lista(BuildContext context) {
     return FutureBuilder(
       future: fiestasProvider.cargarLocalidades(),
@@ -40,7 +42,7 @@ class ListaLocalidadesScreen extends StatelessWidget {
       },
     );
   }
- 
+
   List<Widget> _listaElementos(BuildContext context, List<String> data) {
     final List<Widget> lst = [];
     data.forEach((element) {
@@ -61,6 +63,3 @@ class ListaLocalidadesScreen extends StatelessWidget {
     return lst;
   }
 }
- 
- 
- 

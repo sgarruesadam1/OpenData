@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:trabajo_open_data/models/fiestas_models.dart';
-import 'package:trabajo_open_data/providers/fiestas_provider.dart';
-import 'package:trabajo_open_data/screens/mapa_screen.dart';
+import 'package:opendata/Screens/mapa_Screen.dart';
 
 class Swiperwidget extends StatelessWidget {
   final List<String> fiesta;
@@ -28,7 +26,7 @@ class Swiperwidget extends StatelessWidget {
             box.write('nombre', fiesta.elementAt(index));
             print(box.read('nombre'));
 
-            Get.offAll(MapaPuntosScreen(), arguments: args);
+            //Get.offAll(MapaScreen(), arguments: args);
           },
           child: Image.network(fiesta[index]),
         );
