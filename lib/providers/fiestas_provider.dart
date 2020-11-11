@@ -75,20 +75,7 @@ class FiestasProvider {
     });
     return listaNombres;
   }
-  Future<List<String>> cargarTipos(String localidad) async {
-    if (listaFiestas.length == 0) {
-      await cargarFiestas();
-    }
-    listaTiposfiestas = [];
-    listaFiestas.forEach((pr) {
-      if ((listaTiposfiestas.indexOf(pr.tipo) < 0) &&
-          (pr.tipo.length != 0) &&
-          (pr.nombreLocalidad == localidad)) {
-        listaTiposfiestas.add(pr.tipo);
-      }
-    });
-    return listaTiposfiestas;
-  }
+  
 }
  
 final fiestasProvider = new FiestasProvider();
