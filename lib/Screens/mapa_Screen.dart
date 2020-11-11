@@ -34,8 +34,7 @@ class _MapaScreenState extends State<MapaScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
-              "Ubicacion donde se encuentran las Fiestas / Tradiciones / Eventos"),
+          title: Text("Ubicacion"),
         ),
         //drawer: MenuWidget(),
         body: Column(

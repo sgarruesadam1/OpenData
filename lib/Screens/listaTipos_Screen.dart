@@ -15,7 +15,7 @@ class ListaTiposScreen extends StatelessWidget {
     args = Get.arguments ?? new Map<String, Object>();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tipos de Fiestas, Tradiciones y Eventos"),
+        title: Text("Tipos"),
       ),
       //drawer: MenuWidget(),
       body: _lista(context),
