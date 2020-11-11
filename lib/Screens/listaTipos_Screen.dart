@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:OpenData/providers/fiestas_provider.dart';
-import 'package:OpenData/screens/listaLocalidades_Screen.dart';
+
 
 class ListaTiposScreen extends StatelessWidget {
   Map<String, Object> args = new Map<String, Object>();
@@ -65,3 +61,4 @@ class ListaTiposScreen extends StatelessWidget {
     return lst;
   }
 }
+

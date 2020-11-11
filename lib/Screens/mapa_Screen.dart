@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
-import 'package:get/get.dart';
-import 'package:latlong/latlong.dart';
-import 'package:OpenData/models/fiesta_model.dart';
-import 'package:OpenData/models/fiestas_models.dart';
-import 'package:OpenData/screens/listaNombres_screen.dart';
-import 'package:utm/utm.dart';
+
 
 class MapaScreen extends StatefulWidget {
   final Fiesta fiesta;
@@ -106,3 +99,4 @@ class _MapaScreenState extends State<MapaScreen> {
     );
   }
 }
+
